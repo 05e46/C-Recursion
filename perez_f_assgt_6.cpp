@@ -79,14 +79,18 @@ void recurse_insert(Node* &head, int number){
 		head->next = NULL;
 	}
 	else {
+		/*Otherwise, simply go to the next node*/
 		recurse_insert(head->next, number);
 	}
 }
 void recurse_print(Node* head){
+	/*If the head is empty, exit*/
 	if (head == NULL){
 		return;
 	}
 	else{
+		/*If the head is not empty, print the current head's info and call 
+		recursive function on the current heads next pointer - that points to the next node*/
 		cout << head->info << endl;
 		(recurse_print(head->next));
 		return;

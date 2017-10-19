@@ -97,6 +97,9 @@ void recurse_print(Node* head){
 	}
 
 }
+/*check if the list head is not emtpy, if not, call function again on the 
+current heads next pointer and do so until there are no more next pointers, then
+print that nodes information and return control to the previous call*/
 void print_reverse(Node* head){
 	if (head != NULL){
 		(print_reverse(head->next));
